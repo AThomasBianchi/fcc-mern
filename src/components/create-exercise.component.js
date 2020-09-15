@@ -22,19 +22,19 @@ const CreateExercise = () => {
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
-  }
+  };
 
   const handleDescription = (e) => {
     setDescription(e.target.value);
-  }
+  };
 
   const handleDuration = (e) => {
     setDuration(e.target.value);
-  }
+  };
 
   const handleDate = (date) => {
     setDate(date);
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ const CreateExercise = () => {
     axios.post('http://localhost:5000/exercises/add', exercise)
       .then(res => console.log(res.data))
     window.location = '/';
-  }
+  };
 
   return (
     <div>
@@ -108,6 +108,6 @@ const CreateExercise = () => {
       </form>
     </div>
   );
-}
+};
 
 export default CreateExercise;
