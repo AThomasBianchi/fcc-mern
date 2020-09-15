@@ -25,7 +25,7 @@ const ExercisesList = () => {
       .catch(error => {
         console.log(error);
       })
-  })
+  }, [])
 
 
   const deleteExercise = id => {
@@ -42,7 +42,7 @@ const ExercisesList = () => {
         <Exercise
           exercise={exer}
           deleteExercise={deleteExercise}
-          key={exer} 
+          key={exer._id} 
         />
       );
     })
